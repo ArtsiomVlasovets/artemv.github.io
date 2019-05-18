@@ -43,6 +43,21 @@ b, strong
 	height: 100vh
 	background-repeat: no-repeat
 	background-size: cover
+	&::after
+		content: ' '
+		width: 100%
+		height: auto
+		background-color: #000
+		opacity: 0.5
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+
+.header-content
+	position: relative
+	z-index: 99
 
 
 @import "media" // Always at the end
