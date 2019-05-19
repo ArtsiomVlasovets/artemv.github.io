@@ -1,0 +1,113 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.site-header
+	background-image: url(../img/@1x/4.jpg)
+	height: 100vh
+	background-repeat: no-repeat
+	background-size: cover
+	color: #fff
+	display: flex
+	justify-content: center
+	flex-direction: column
+	&::after
+		content: ' '
+		width: 100%
+		height: auto
+		background-color: #000
+		opacity: 0.5
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+
+.header-content
+	position: relative
+	z-index: 99
+	.group
+		position: relative
+		margin: 0 auto
+		margin-bottom: 35px
+		max-width: 300px
+		input
+			font-size: 18px
+			box-sizing: border-box
+			display: block
+			width: 300px
+			border: none
+			background: none
+			border-bottom: 1px solid #757575
+			padding: 10px 10px 10px 5px
+			outline: none
+			caret-color: #757575
+			color: #757575
+			&:focus~label, &:valid~label, &:not(:placeholder-shown)~label
+				top: -20px
+				font-size: 14px
+				color: $accent
+			&:last-child
+		label
+			position: absolute
+			top: 10px
+			left: 5px
+			color: $accent
+			font-size: 18px
+			font-weight: normal
+			pointer-events: none
+			transition: 0.2s ease all
+			-webkit-transition: 0.2s ease all
+		button
+			border: none
+			background: none
+			color: $accent
+			outline: none
+			transition: 0.2s ease all
+			float: right
+			margin-top: -20px
+			&:hover
+				color: #ffffff
+				cursor: pointer
+
+
+
+
+
+@import "media" // Always at the end
